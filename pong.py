@@ -1,6 +1,7 @@
 from paddle import Paddle
 from ball import Ball
 import pygame
+import random
  
 # define a main function
 def main():
@@ -30,8 +31,9 @@ def main():
     bounds1=pygame.draw.rect(screen, wcolor, pygame.Rect((0,0), (BORDER, HEIGHT)))
     #bottom wall
     bounds2=pygame.draw.rect(screen, wcolor, pygame.Rect((0,HEIGHT-BORDER), (WIDTH,BORDER)))
-    x0 = WIDTH- Ball.Radius
-    y0 = HEIGHT//2
+    
+    x0 = random.randint(0,WIDTH)
+    y0 = random.randint(0,HEIGHT)
     
     vx0 = 5
 
